@@ -26,13 +26,14 @@ const Home = () => {
         <h1
           style={{
             color: "white",
-            marginTop: "200px",
+            marginTop: "100px",
             textAlign: "center",
             fontSize: "90px",
           }}>
           THE CHAMPIONSHIPS,
           <br /> WIMBLEDONE
         </h1>
+        <Box></Box>
       </Box>
     </Container>
   );
