@@ -1,1 +1,46 @@
-{}
+{
+  "products": [
+    {
+      "name": "Timeless style",
+      "description": "The Datejust’s enduring aesthetics make it instantly recognizable. The characteristic shape of the Oyster case, the 18 kt gold fluted bezel, the Cyclops lens over the date and the five-piece link Jubilee bracelet – specially made for the model – all contributed to making this watch a classic. ",
+      "price": 74532,
+      "image": "https://content.rolex.com/dam/watches/family-pages/datejust/update/2021/_rollers/02/family-page-datejust-roller-02-m126234-0050_2107jva_001.jpg?imwidth=2880",
+      "id": 3
+    },
+    {
+      "name": "Time style",
+      "description": "The Datejust’s enduring aesthetics make it instantly recognizable. The characteristic shape of the Oyster case, the 18 kt gold fluted bezel, the Cyclops lens over the date and the five-piece link Jubilee bracelet – specially made for the model – all contributed to making this watch a classic. ",
+      "price": 64233,
+      "image": "https://content.rolex.com/dam/watches/family-pages/datejust/update/2021/_rollers/02/family-page-datejust-roller-02-m126234-0027_2107jva_001.jpg?imwidth=2880",
+      "id": 4
+    },
+    {
+      "name": "DATEJUST 31",
+      "description": "The light reflections on the case sides and lugs highlight the elegant profile of the 31 mm Oyster case, which is fitted with a domed bezel. Aesthetically, the Datejust has spanned eras, while retaining the enduring codes that make it, notably in its traditional versions, one of the most recognized and recognizable of watches.",
+      "price": 12003,
+      "image": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m278240-0011.png?imwidth=720",
+      "id": 6
+    },
+    {
+      "name": "MILGAUSS",
+      "description": "With its clean lines and evocative orange seconds hand, shaped like a lightning bolt to echo the original model, the Milgauss is recognizable at a glance.",
+      "price": 34532,
+      "image": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m116400gv-0002.png?imwidth=840",
+      "id": 7
+    },
+    {
+      "name": "MILGAUSS",
+      "description": "Created in 1956, it can withstand magnetic fields of up to 1,000 gauss. Hence its name, “mille”, which is French for one thousand. The first watch of its kind, the Milgauss combines unique aesthetics and scientific heritage.",
+      "price": 23423,
+      "image": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m116400gv-0001.png?imwidth=840",
+      "id": 8
+    },
+    {
+      "name": "Sea-Dweller",
+      "description": "Waterproof to a depth of 4,000 feet (1,220 metres) for the Rolex Sea-Dweller, launched in 1967, and 12,800 feet (3,900 metres) for the Rolex Deepsea unveiled in 2008, they are the ultimate manifestation of Rolex’s leadership in divers’ watches and the result of decades of collaboration with diving professionals.",
+      "price": 23423,
+      "image": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m136660-0003.png?imwidth=840",
+      "id": 9
+    }
+  ]
+}
