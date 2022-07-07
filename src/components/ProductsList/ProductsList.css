@@ -1,0 +1,18 @@
+.fullscreen-bg {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 84vh;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  z-index: -99;
+  position: relative;
+  filter: brightness(75%);
+}
+
+.text-vid {
+  position: absolute;
+  top: 10%;
+}

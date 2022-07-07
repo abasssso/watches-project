@@ -1,38 +1,58 @@
-import { Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
 import Logo from "../images/logo.png";
-
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AddShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Badge, IconButton } from "@mui/material";
+import { cartContext } from "../../context/cartContext";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const { getCart, count } = React.useContext(cartContext);
+  React.useEffect(() => {
+    getCart();
+  }, []);
   return (
     <Container>
-      {/* <div backgroundColor="white" height={"100px"} width={"100vw"}>
-        nfew j.wekl
-      </div> */}
       <Box
+        id="navbar"
+        height={"130px"}
         color={"white"}
         display={"flex"}
         justifyContent={"space-evenly"}
         alignItems={"flex-end"}
         marginTop={"20px"}>
-        <p style={{ display: "flex", alignItems: "center" }}>
+        <p
+          onClick={() => navigate("/products")}
+          style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
           <StarBorderIcon style={{ width: "50px" }} />
-          Your selection
+          Watches
         </p>
-        <p style={{ display: "flex", alignItems: "center" }}>
-          <SearchIcon style={{ width: "50px" }} /> Search
+        <p
+          onClick={() => navigate("/favourites")}
+          style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
+          <FavoriteIcon style={{ width: "50px" }} /> Favourites
         </p>
-        <img style={{ width: "200px" }} src={Logo} alt="" />
-        <p style={{ display: "flex", alignItems: "center" }}>
-          <ShoppingCartIcon style={{ width: "50px" }} /> Cart
+        <img
+          onClick={() => navigate("/home")}
+          style={{ width: "200px", cursor: "pointer" }}
+          src={Logo}
+          alt=""
+        />
+        <p
+          onClick={() => navigate("/cart")}
+          style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
+          <Badge badgeContent={count} color="error">
+            <AddShoppingCartIcon style={{ width: "50px" }} />
+          </Badge>{" "}
+          Cart
         </p>
-        <p style={{ display: "flex", alignItems: "center" }}>
-          {" "}
+        <p
+          onClick={() => navigate("/add")}
+          style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
           <AccountCircleIcon style={{ width: "50px" }} /> Account
         </p>
       </Box>
