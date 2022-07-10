@@ -34,7 +34,6 @@ const CartContextProvider = ({ children }) => {
     const isProductInCart = cart.products.some(
       item => item.item.id === newProduct.item.id
     );
-    console.log("товар в корзине", isProductInCart);
     if (isProductInCart) {
       cart.products = cart.products.filter(
         item => item.item.id !== newProduct.item.id
@@ -58,7 +57,7 @@ const CartContextProvider = ({ children }) => {
       console.log(prev);
       return prev + curr.subPrice;
     }, 0);
-    console.log(cart.totalPrice);
+
     dispatch({
       type: "GET_CART",
       payload: cart,

@@ -1,0 +1,57 @@
+@media all and (max-width: 1164px) {
+  .text1 {
+    /* width: 0; */
+    text-align: center;
+  }
+  .videos {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .footer {
+    display: felx;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .video.home {
+    display: none;
+    position: fixed !important;
+    width: "300px";
+    /* background: url("https://atlanticwatches.ch/wp-content/uploads/2021/12/Watches-for-Her.png"); */
+  }
+  h1 {
+    /* width: "10px"; */
+    font-size: 40px !important;
+  }
+  .footer-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 801px) {
+  .home {
+    display: "flex";
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media all and(max-width: 1024px) {
+}
+
+@media (max-width: 425px) {
+  .header {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    /* justify-content: center !important; */
+  }
+
+  .slider {
+    width: 300px !important;
+  }
+}

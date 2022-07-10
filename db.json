@@ -15,18 +15,11 @@
       "id": 4
     },
     {
-      "name": "DATEJUST 31",
+      "name": "DATEJUST 3146",
       "description": "The light reflections on the case sides and lugs highlight the elegant profile of the 31 mm Oyster case, which is fitted with a domed bezel. Aesthetically, the Datejust has spanned eras, while retaining the enduring codes that make it, notably in its traditional versions, one of the most recognized and recognizable of watches.",
       "price": 12003,
       "image": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m278240-0011.png?imwidth=720",
       "id": 6
-    },
-    {
-      "name": "MILGAUSS",
-      "description": "With its clean lines and evocative orange seconds hand, shaped like a lightning bolt to echo the original model, the Milgauss is recognizable at a glance.",
-      "price": 34532,
-      "image": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m116400gv-0002.png?imwidth=840",
-      "id": 7
     },
     {
       "name": "MILGAUSS",
@@ -41,6 +34,34 @@
       "price": 23423,
       "image": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m136660-0003.png?imwidth=840",
       "id": 9
+    },
+    {
+      "name": "SEA-DWELLER",
+      "description": "It features a distinctive black dial and large luminescent hour markers. Waterproof to a depth of 1,220 metres (4,000 feet) with a unidirectional 60-minute rotatable bezel, the Rolex Sea-Dweller is amongst the ultra-resistant divers’ watches engineered by Rolex for deep-sea exploration.",
+      "price": 90323,
+      "image": "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m126600-0002.png?imwidth=840",
+      "id": 10
+    },
+    {
+      "name": "frvrtr",
+      "description": "gtgt",
+      "price": 33,
+      "image": "gtr",
+      "id": 11
+    },
+    {
+      "name": "danay",
+      "description": "ddd",
+      "price": 221,
+      "image": "dsa",
+      "id": 12
+    },
+    {
+      "name": "fjhewubfi",
+      "description": "gwegwe",
+      "price": 3223,
+      "image": "tewrtwe",
+      "id": 13
     }
   ]
 }

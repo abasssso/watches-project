@@ -5,18 +5,22 @@ import Routing from "./Routing";
 import "../src/App.css";
 import ProductsContextProvider from "./context/productsContext";
 import CartContextProvider from "./context/cartContext";
+import FavouriteContextProvider from "./context/favouriteContext";
+import "./media.css";
 
 function App() {
   return (
-    <CartContextProvider>
-      <ProductsContextProvider>
-        <BrowserRouter>
-          <Header />
-          <Routing />
-          <Footer />
-        </BrowserRouter>
-      </ProductsContextProvider>
-    </CartContextProvider>
+    <FavouriteContextProvider>
+      <CartContextProvider>
+        <ProductsContextProvider>
+          <BrowserRouter>
+            <Header />
+            <Routing />
+            <Footer />
+          </BrowserRouter>
+        </ProductsContextProvider>
+      </CartContextProvider>
+    </FavouriteContextProvider>
   );
 }
 
