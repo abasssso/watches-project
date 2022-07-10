@@ -88,7 +88,7 @@ export default function validateInfo(values) {
     errors.ccvv
   ) {
     errors.variant = "success";
-    errors.message = "Credit Card is valid";
+    errors.message = "Your order has been completed";
   }
 
   return errors;

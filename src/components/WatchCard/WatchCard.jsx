@@ -2,7 +2,7 @@ import { Button, IconButton, Tooltip } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import InfoIcon from "@mui/icons-material/Info";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Card, CardGroup } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
@@ -10,14 +10,18 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { productsContext } from "../../context/productsContext";
 import { cartContext } from "../../context/cartContext";
 import ClearIcon from "@mui/icons-material/Clear";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { favouriteContext } from "../../context/favouriteContext";
 
 export default function WatchCard({ item }) {
   const navigate = useNavigate();
   const { deleteWatch } = React.useContext(productsContext);
   const { addToCart, checkProductInCart } = React.useContext(cartContext);
+  const { addToFav, checkProductInFav } = React.useContext(favouriteContext);
   const [productState, setProductState] = React.useState(
     checkProductInCart(item.id)
   );
+  const [favState, setFavState] = React.useState(checkProductInFav(item.id));
   return (
     <CardGroup
       style={{
@@ -70,11 +74,22 @@ export default function WatchCard({ item }) {
             {/* <AddIcon color={productState ? "secondary" : "primary"} /> */}
           </IconButton>
 
-          <Tooltip title="Add to Favourites">
-            <IconButton>
-              <FavoriteBorderIcon />
-            </IconButton>
-          </Tooltip>
+          <IconButton
+            onClick={() => {
+              addToFav(item);
+              setFavState(checkProductInFav(item.id));
+            }}>
+            {favState ? (
+              <Tooltip title="Remove from Favourite">
+                <FavoriteIcon />
+              </Tooltip>
+            ) : (
+              <Tooltip title="Add to Favourite">
+                <FavoriteBorderIcon />
+              </Tooltip>
+            )}
+          </IconButton>
+
           <Tooltip title="Delete">
             <IconButton onClick={() => deleteWatch(item.id)}>
               <DeleteIcon />

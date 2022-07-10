@@ -1,4 +1,4 @@
-import { Box, Container, Pagination, TextField } from "@mui/material";
+import { Box, Container, Pagination, Slider, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { productsContext } from "../../context/productsContext";
@@ -15,6 +15,7 @@ const ProductsList = () => {
   const [currentPage, setCurrentPage] = useState(
     searchParams.get("_page") ? +searchParams.get("_page") : 1
   );
+  const [price, setPrice] = useState([1000, 1000000]);
   useEffect(() => {
     getWatch();
   }, []);
@@ -23,8 +24,10 @@ const ProductsList = () => {
       q: search,
       _page: currentPage,
       _limit: 4,
+      price_gte: price[0],
+      price_lte: price[1],
     });
-  }, [search, currentPage]);
+  }, [search, currentPage, price]);
   useEffect(() => {
     getWatch();
   }, [searchParams]);
@@ -66,7 +69,7 @@ const ProductsList = () => {
       <Box
         style={{
           marginTop: "400px",
-          width: "1140px",
+          // width: "1140px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -86,19 +89,36 @@ const ProductsList = () => {
           find a perfect combination of style and functionality.
         </p>
       </Box>
-      <Box display={"flex"} justifyContent={"center"} margin={"10px"}>
+      <Box
+        display={"flex"}
+        justifyContent={"center"}
+        margin={"10px"}
+        alignItems={"center"}>
         <TextField
           placeholder="Search"
           onChange={e => setSearch(e.target.value)}
           value={search}
           variant="filled"
         />
+        <Slider
+          getAriaLabel={() => "Price range"}
+          value={price}
+          onChange={(e, value) => {
+            console.log(value);
+            setPrice(value);
+          }}
+          style={{ maxWidth: "400px", marginLeft: "50px" }}
+          valueLabelDisplay="auto"
+          min={0}
+          max={1000000}
+          step={10000}
+        />
       </Box>
-      <Box display={"flex"} flexDirection={"row"}>
+      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
         {products.map(item => (
           <WatchCard key={item.id} item={item} />
         ))}
-      </Box>
+      </div>
       <Pagination
         onChange={(event, page) => {
           setCurrentPage(page);

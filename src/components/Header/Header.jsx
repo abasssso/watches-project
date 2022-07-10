@@ -8,6 +8,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Badge, IconButton } from "@mui/material";
 import { cartContext } from "../../context/cartContext";
+import "./Header.css";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -16,15 +17,12 @@ const Header = () => {
     getCart();
   }, []);
   return (
-    <Container>
-      <Box
-        id="navbar"
-        height={"130px"}
-        color={"white"}
-        display={"flex"}
-        justifyContent={"space-evenly"}
-        alignItems={"flex-end"}
-        marginTop={"20px"}>
+    <div>
+      <div
+        className="header"
+        // id="navbar"
+        // height={"130px"}
+      >
         <p
           onClick={() => navigate("/products")}
           style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
@@ -53,10 +51,10 @@ const Header = () => {
         <p
           onClick={() => navigate("/add")}
           style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <AccountCircleIcon style={{ width: "50px" }} /> Account
+          <AccountCircleIcon style={{ width: "50px" }} /> Add product
         </p>
-      </Box>
-    </Container>
+      </div>
+    </div>
   );
 };
 

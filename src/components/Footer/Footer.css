@@ -1,0 +1,18 @@
+.footer p {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding-top: 50px;
+}
+.footer-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.a {
+  text-decoration: none;
+}
